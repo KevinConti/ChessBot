@@ -1,1 +1,1 @@
-web: python3 run_chessbot.py
+web: pip3 install -r requirements.txt && python3 run_chessbot.py
