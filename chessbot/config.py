@@ -3,8 +3,8 @@ import chess.svg
 
 WEBHOOK_PORT = 7003
 
-BOT_INVITE_LINK = "https://discord.com/oauth2/authorize?client_id=366770566331629579&scope=bot&permissions=52288"
-GITHUB_LINK = "https://github.com/qwertyquerty/ChessBot"
+BOT_INVITE_LINK = "https://discord.com/api/oauth2/authorize?client_id=879464016223821855&permissions=2048&scope=bot"
+GITHUB_LINK = "https://github.com/KevinConti/ChessBot"
 
 BOTURL = "https://discordbots.org/bot/366770566331629579"
 MOTD = ""
@@ -133,7 +133,9 @@ PROCESSES = 4
 
 APM_SERVICE = None
 
-#from chessbot.tok import * # Overwrite defaults
+# This line isn't working, trying without it
+# See GitHub Issue: https://github.com/qwertyquerty/ChessBot/issues/14
+# from chessbot.tok import * # Overwrite defaults
 
-
+DBLTOKEN = "None"
 DBLHEADERS = {"Authorization" : DBLTOKEN}
