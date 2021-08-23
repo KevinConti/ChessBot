@@ -45,7 +45,7 @@ class CommandDraw(Command):
             def check(reaction, user):
                 return user.id == ctx.game.players[not ctx.game.players.index(ctx.mem.id)] and str(reaction) in [ACCEPT_MARK, DENY_MARK] and reaction.message.id == m.id
 
-            reaction, user = await ctx.bot.wait_for('reaction_add', check=check, timeout=15)
+            reaction, user = await ctx.bot.wait_for('reaction_add', check=check, timeout=None)
 
             if str(reaction) == ACCEPT_MARK:
                 await reward_game(ctx.mem.id, ctx.game.players[not ctx.game.players.index(ctx.mem.id)], OUTCOME_DRAW, ctx.game, ctx.ch, ctx.bot)

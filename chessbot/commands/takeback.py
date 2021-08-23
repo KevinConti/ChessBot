@@ -18,7 +18,7 @@ class CommandTakeback(Command):
                 def check(reaction, user):
                     return user.id == ctx.game.players[not ctx.game.players.index(ctx.mem.id)] and str(reaction) in [ACCEPT_MARK, DENY_MARK]
 
-                reaction, user = await ctx.bot.wait_for('reaction_add', check=check, timeout=10)
+                reaction, user = await ctx.bot.wait_for('reaction_add', check=check, timeout=None)
 
                 if str(reaction) == ACCEPT_MARK:
                         ctx.game.pop("moves", 1)

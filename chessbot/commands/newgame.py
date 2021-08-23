@@ -44,7 +44,7 @@ class CommandPlay(Command):
 
 						def check(reaction, user):
 							return user == ctx.args[0] and str(reaction) in [ACCEPT_MARK, DENY_MARK] and reaction.message.id == m.id
-						reaction, user = await ctx.bot.wait_for('reaction_add', check=check, timeout=50)
+						reaction, user = await ctx.bot.wait_for('reaction_add', check=check, timeout=None)
 
 						if str(reaction) == ACCEPT_MARK:
 							await ctx.ch.trigger_typing()
