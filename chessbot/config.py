@@ -133,7 +133,7 @@ PROCESSES = 4
 
 APM_SERVICE = None
 
-from chessbot.tok import * # Overwrite defaults
+#from chessbot.tok import * # Overwrite defaults
 
 
 DBLHEADERS = {"Authorization" : DBLTOKEN}
